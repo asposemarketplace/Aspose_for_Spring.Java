@@ -32,14 +32,11 @@ Comming Soon:
 
 ## Running petclinic locally
 ```
-	git clone https://github.com/SpringSource/spring-petclinic.git
+	git clone https://github.com/asposemarketplace/Aspose_for_Spring.Java.git
 	mvn tomcat7:run
 ```
 
 You can then access petclinic here: http://localhost:9966/petclinic/
-
-## In case you find a bug/suggested improvement for Spring Petclinic
-Our issue tracker is available here: https://github.com/SpringSource/spring-petclinic/issues
 
 ## Working with Petclinic in Eclipse/STS
 

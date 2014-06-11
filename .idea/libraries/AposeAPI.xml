@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="AposeAPI">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/aspose-barcode-5.8.0-jdk16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aspose-cells-8.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aspose-email-4.1.0.0-jdk16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aspose-imaging-2.1.0.0-jdk16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aspose-pdf-jdk14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aspose-pdf-kit-4.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aspose-words-14.4.1-jdk16.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/Aspose.Examples.Launcher.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bcprov-jdk16-146.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jsch-0.1.27.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.eclipse.jgit-2.2.0.201212191850-r.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

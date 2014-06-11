@@ -38,6 +38,14 @@ Comming Soon:
 
 You can then access petclinic here: http://localhost:9966/petclinic/
 
+
+## Working with Petclinic in JetBrains
+
+The following items should be installed in your system:
+* Maven 3 (http://www.sonatype.com/books/mvnref-book/reference/installation.html)
+* git command line tool (https://help.github.com/articles/set-up-git)
+* IntelliJ IDEA
+
 ## Working with Petclinic in Eclipse/STS
 
 ### prerequisites
@@ -54,13 +62,15 @@ If m2e is not there, just follow the install process here: http://eclipse.org/m2
 
 1) In the command line
 ```
-git clone https://github.com/SpringSource/spring-petclinic.git
+git clone https://github.com/asposemarketplace/Aspose_for_Spring.Java.git
 ```
 2) Inside Eclipse
 ```
 File -> Import -> Maven -> Existing Maven project
 ```
+2) Inside IntelliJ
 
+File--> Open -> select spring-petclinic Project
 
 ## Looking for something in particular?
 

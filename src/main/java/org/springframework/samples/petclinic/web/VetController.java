@@ -16,24 +16,21 @@
 package org.springframework.samples.petclinic.web;
 
 import java.io.IOException;
-import java.util.Collection;
 import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.*;
 import org.springframework.samples.petclinic.service.ClinicService;
-import org.springframework.samples.petclinic.util.AsposeAPI;
+import org.springframework.samples.petclinic.web.aspose.AsposeAPI;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
 
 /**
  * @author Juergen Hoeller
@@ -80,7 +77,7 @@ public class VetController {
  */
 
     @RequestMapping(value = "/vets/{typeFile}/export", method = RequestMethod.GET)
-    public String processExport(@PathVariable("typeFile") String typeFile,Vets vets,HttpServletResponse response) {
+    public void processExport(@PathVariable("typeFile") String typeFile,Vets vets,HttpServletResponse response, HttpServletRequest req) {
 
 
         if (vets.getVetList().size()<1) {
@@ -106,20 +103,19 @@ public class VetController {
         try {
             ServletOutputStream out = response.getOutputStream();
             if (typeFile.equals("pdf")) {
-                AsposeAPI.generateVetsAsposePDF(out, vets);
+                AsposeAPI.generateVetsAsposePDF(out, vets,req.getServletContext());
             } else  if (typeFile.equals("cells")) {
                 AsposeAPI.generateVetsAsposeCells(out, vets);
             } else  if (typeFile.equals("words")) {
-                AsposeAPI.generateVetsAsposeWords(out, vets);
+                AsposeAPI.generateVetsAsposeWords(out, vets,req.getServletContext());
             }
 
             out.close();
 
-        } catch (IOException io) {
-
+        } catch (Exception io) {
+          io.printStackTrace();
         }
 
-        return null;
     }
 
     @RequestMapping(value = "/vet/{vetId}/email", method = RequestMethod.GET)

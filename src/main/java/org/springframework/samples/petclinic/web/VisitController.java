@@ -17,7 +17,6 @@ package org.springframework.samples.petclinic.web;
 
 import java.io.IOException;
 import java.util.Map;
-import java.util.UUID;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
@@ -27,11 +26,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.support.FormattingConversionService;
 import org.springframework.samples.petclinic.model.CurrencyAmount;
-import org.springframework.samples.petclinic.model.EmailForm;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.Visit;
 import org.springframework.samples.petclinic.service.ClinicService;
-import org.springframework.samples.petclinic.util.AsposeAPI;
+import org.springframework.samples.petclinic.web.aspose.AsposeAPI;
 import org.springframework.samples.petclinic.web.aspose.AsposeAPIConstants;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;

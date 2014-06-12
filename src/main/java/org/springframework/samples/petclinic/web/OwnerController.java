@@ -15,7 +15,6 @@
  */
 package org.springframework.samples.petclinic.web;
 
-import java.io.IOException;
 import java.util.Collection;
 import java.util.Map;
 
@@ -27,7 +26,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.service.ClinicService;
-import org.springframework.samples.petclinic.util.AsposeAPI;
+import org.springframework.samples.petclinic.web.aspose.AsposeAPI;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -126,7 +125,7 @@ public class OwnerController {
  * for Spring, Spring MVC Java Developers.
  */
     @RequestMapping(value = "/owners/{typeFile}/export", method = RequestMethod.GET)
-    public String processExport(@PathVariable("typeFile") String typeFile,Owner owner,HttpServletResponse response) {
+    public String processExport(@PathVariable("typeFile") String typeFile,Owner owner,HttpServletResponse response, HttpServletRequest req) {
 
         // allow parameterless GET request for /owners to return all records
         if (owner.getLastName() == null) {
@@ -153,11 +152,11 @@ public class OwnerController {
         try {
             ServletOutputStream out = response.getOutputStream();
             if (typeFile.equals("pdf")) {
-                AsposeAPI.generateOwnersListAsposePDF(out, results);
+                AsposeAPI.generateOwnersListAsposePDF(out, results,req.getServletContext());
             } else  if (typeFile.equals("cells")) {
                 AsposeAPI.generateOwnersListAsposeCells(out, results);
             } else  if (typeFile.equals("words")) {
-                AsposeAPI.generateOwnersListAsposeWords(out, results);
+                AsposeAPI.generateOwnersListAsposeWords(out, results,req.getServletContext());
             }
 
             out.close();

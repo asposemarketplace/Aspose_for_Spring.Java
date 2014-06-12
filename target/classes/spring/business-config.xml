@@ -21,7 +21,7 @@
     <!-- Configurer that replaces ${...} placeholders with values from a properties file -->
     <!-- (in this case, JDBC-related settings for the JPA EntityManager definition below) -->
     <context:property-placeholder location="classpath:spring/data-access.properties" order="1" system-properties-mode="OVERRIDE"/>
-    <context:property-placeholder location="classpath:spring/aspose/aspose.properties" order="2" ignore-unresolvable="true" />
+   
 
     <!-- enables scanning for @Transactional annotations -->
     <tx:annotation-driven />

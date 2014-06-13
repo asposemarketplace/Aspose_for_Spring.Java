@@ -105,7 +105,7 @@ public class VetController {
             if (typeFile.equals("pdf")) {
                 AsposeAPI.generateVetsAsposePDF(out, vets,req.getServletContext());
             } else  if (typeFile.equals("cells")) {
-                AsposeAPI.generateVetsAsposeCells(out, vets);
+                AsposeAPI.generateVetsAsposeCells(out, vets,req.getServletContext());
             } else  if (typeFile.equals("words")) {
                 AsposeAPI.generateVetsAsposeWords(out, vets,req.getServletContext());
             }

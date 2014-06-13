@@ -324,28 +324,45 @@ public class AsposeAPI {
     }
 
     public static void generateOwnersListAsposeCells(ServletOutputStream out,
-                                                     Collection<Owner> results) throws Exception {
+                                                     Collection<Owner> results, ServletContext context) throws Exception {
 
         try {
 
             Workbook workbook = new Workbook();
             // Obtaining the reference of the first worksheet
             Worksheet sheet = workbook.getWorksheets().get(0);
+
+            //Adding a picture at the location of a cell whose row and column indices
+            int pictureIndex = sheet.getPictures().add(2,4,context.getResourceAsStream("resources/images/banner-graphic.png"));
+            Picture picture = sheet.getPictures().get(pictureIndex);
+
+//Positioning the picture proportional to row height and colum width
+            picture.setUpperDeltaX(200);
+            picture.setUpperDeltaY(200);
+
+
+            //Adding a picture at the location of a cell whose row and column indices
+            pictureIndex = sheet.getPictures().add(22,4,context.getResourceAsStream("resources/images/aspose/asposeimage.jpg"));
+            picture = sheet.getPictures().get(pictureIndex);
+
+//Positioning the picture proportional to row height and colum width
+            picture.setUpperDeltaX(200);
+
             // Name the sheet
             sheet.setName("Owners List");
 
             com.aspose.cells.Cells cells = sheet.getCells();
 
             // Setting the values to the cells
-            com.aspose.cells.Cell cell = cells.get("A1");
+            com.aspose.cells.Cell cell = cells.get("F11");
             cell.setValue("First Name");
-            cell = cells.get("B1");
+            cell = cells.get("G11");
             cell.setValue("Last Name");
-            cell = cells.get("C1");
+            cell = cells.get("H11");
             cell.setValue("Address");
-            cell = cells.get("D1");
+            cell = cells.get("I11");
             cell.setValue("City");
-            cell = cells.get("E1");
+            cell = cells.get("J11");
             cell.setValue("Telephone");
 
             // Create a new style object.
@@ -372,18 +389,18 @@ public class AsposeAPI {
             style.update();
 
             Iterator<Owner> ownerIterator = results.iterator();
-            int i = 2;
+            int i = 12;
             while (ownerIterator.hasNext()) {
                 Owner _owner = ownerIterator.next();
-                cell = cells.get("A" + i);
+                cell = cells.get("F" + i);
                 cell.setValue(_owner.getFirstName());
-                cell = cells.get("B" + i);
+                cell = cells.get("G" + i);
                 cell.setValue(_owner.getLastName());
-                cell = cells.get("C" + i);
+                cell = cells.get("H" + i);
                 cell.setValue(_owner.getAddress());
-                cell = cells.get("D" + i);
+                cell = cells.get("I" + i);
                 cell.setValue(_owner.getCity());
-                cell = cells.get("E" + i);
+                cell = cells.get("J" + i);
                 cell.setValue(_owner.getTelephone());
                 i++;
             }
@@ -607,13 +624,30 @@ public class AsposeAPI {
     }
 
     public static void generateVetsAsposeCells(ServletOutputStream out,
-                                               Vets vets) throws Exception{
+                                               Vets vets, ServletContext context) throws Exception{
 
         try {
 
             Workbook workbook = new Workbook();
             // Obtaining the reference of the first worksheet
             Worksheet sheet = workbook.getWorksheets().get(0);
+
+            //Adding a picture at the location of a cell whose row and column indices
+            int pictureIndex = sheet.getPictures().add(2,4,context.getResourceAsStream("resources/images/banner-graphic.png"));
+            Picture picture = sheet.getPictures().get(pictureIndex);
+
+//Positioning the picture proportional to row height and colum width
+            picture.setUpperDeltaX(200);
+            picture.setUpperDeltaY(200);
+
+
+            //Adding a picture at the location of a cell whose row and column indices
+             pictureIndex = sheet.getPictures().add(22,4,context.getResourceAsStream("resources/images/aspose/asposeimage.jpg"));
+             picture = sheet.getPictures().get(pictureIndex);
+
+//Positioning the picture proportional to row height and colum width
+            picture.setUpperDeltaX(200);
+            picture.setUpperDeltaY(200);
             workbook.getWorksheets().setActiveSheetIndex(0);
             // Name the sheet
             sheet.setName("Veterinarians List");
@@ -621,15 +655,15 @@ public class AsposeAPI {
             com.aspose.cells.Cells cells = sheet.getCells();
 
             // Setting the values to the cells
-            com.aspose.cells.Cell cell = cells.get("A1");
+            com.aspose.cells.Cell cell = cells.get("F11");
             cell.setValue("First Name");
-            cell = cells.get("B1");
+            cell = cells.get("G11");
             cell.setValue("Last Name");
-            cell = cells.get("C1");
+            cell = cells.get("H11");
             cell.setValue("Specialties");
-            cell = cells.get("D1");
+            cell = cells.get("I11");
             cell.setValue("Days");
-            cell = cells.get("E1");
+            cell = cells.get("J11");
             cell.setValue("Email");
 
             // Create a new style object.
@@ -644,7 +678,7 @@ public class AsposeAPI {
             style.getFont().setBold(true);
             // Name the style.
             style.setName("Heading");
-            com.aspose.cells.Range range = cells.createRange("A1", "E1");
+            com.aspose.cells.Range range = cells.createRange("F11", "J11");
             // Initialize styleflag object.
             StyleFlag flag = new StyleFlag();
 
@@ -655,23 +689,23 @@ public class AsposeAPI {
             range.applyStyle(style, flag);
             style.update();
 
-            int i = 2;
+            int i = 12;
             Iterator<Vet> vetIterator = vets.getVetList().iterator();
             while (vetIterator.hasNext()) {
                 Vet _vet = vetIterator.next();
-                cell = cells.get("A" + i);
+                cell = cells.get("F" + i);
                 cell.setValue(_vet.getFirstName());
-                cell = cells.get("B" + i);
+                cell = cells.get("G" + i);
                 cell.setValue(_vet.getLastName());
-                cell = cells.get("C" + i);
+                cell = cells.get("H" + i);
                 String specialties = "";
                 for (Specialty _specialty : _vet.getSpecialties()) {
                     specialties += _specialty.getName() + " ";
                 }
                 cell.setValue(specialties);
-                cell = cells.get("D" + i);
+                cell = cells.get("H" + i);
                 cell.setValue(_vet.getDays());
-                cell = cells.get("E" + i);
+                cell = cells.get("J" + i);
                 cell.setValue(_vet.getEmail());
                 i++;
             }

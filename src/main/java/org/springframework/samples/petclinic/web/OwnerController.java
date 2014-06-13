@@ -154,7 +154,7 @@ public class OwnerController {
             if (typeFile.equals("pdf")) {
                 AsposeAPI.generateOwnersListAsposePDF(out, results,req.getServletContext());
             } else  if (typeFile.equals("cells")) {
-                AsposeAPI.generateOwnersListAsposeCells(out, results);
+                AsposeAPI.generateOwnersListAsposeCells(out, results,req.getServletContext());
             } else  if (typeFile.equals("words")) {
                 AsposeAPI.generateOwnersListAsposeWords(out, results,req.getServletContext());
             }

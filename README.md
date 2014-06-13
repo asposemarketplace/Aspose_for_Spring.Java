@@ -71,9 +71,9 @@ git clone https://github.com/asposemarketplace/Aspose_for_Spring.Java.git
 File -> Import -> Maven -> Existing Maven project
 ```
 2) Inside IntelliJ
-
+```
 File--> Open -> select spring-petclinic Project
-
+```
 ## Looking for something in particular?
 
 <table>

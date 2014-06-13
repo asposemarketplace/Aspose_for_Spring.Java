@@ -1,31 +1,33 @@
-Aspose_for_Spring.Java
-======================
+# Aspose for Spring Java
 
-Aspose for Spring Java provides source code and detailed usage instructions for extending the existing Spring.Java samples.
+Aspose for Spring.Java provides usage samples / sourcecodes for the demonstration of Aspose API for Java by extending famous Spring Java PetClinic Sample Web Application.
 
----------------------------------------
+This extension of "Spring Java PetClinic Sample Web Application" also shows the Integration of Aspose APIs with Spring MVC, JSP and Maven Project.
 
-# Aspose Extension for Spring PetClinic Sample Application
+This extension helps you to explore Aspose Java components within Spring Framework / Spring MVC /Maven environments
+
+# Aspose Extension for Spring PetClinic Sample Web Application
 
 ## What does it look like?
 -spring-petclinic has been deployed here on cloudfoundry: http://demo-spring-petclinic.cfapps.io/
 
-# For Aspose API for Java see url : http://www.aspose.com/java/total-component.aspx
+## For Aspose API for Java see url : http://www.aspose.com/java/total-component.aspx
 
-# This Extension of PetClinic Sample Application for Aspose API includes the following new features and webpages updates:
+## This Extension of Spring PetClinic Sample Application for Aspose API includes the following new features and webpages updates:
 
-1. You can export Owners List, Veterinarians  List to PDF, WORD and Excel Documents.
-2. Email feature is added to Veterinarians  Page, enable you to email a Veterinarians through Aspose.email API for Java
-   using your Outlook client.
-3. Bill Amount Field is added for Visits (i.e Add/Edit Visit), further showing Amount as well as Barcode image for same on
-   Add /Edit Visit and Owners Information page.
-4. Aspose Tag library for BarCode API is added into the source code for displaying barcode on JSP pages.
+1.   On Veterinarians Page, Availability Days and Email Addresses are added, by Clicking on Email Address of any one will open Email Form where you can write email to the Veterinarian and send it through your Outlook Client by using Aspose APIs (Aspose.Email)
+2.   On Veterinarians Page, You can export Veterinarians List to PDF, MS-Word and MS-Excel Formats using Aspose APIs (Aspose.PDF, Aspose.Words, Aspose.Cells)
+3.   On Owners List Page, You can export Veterinarians List to PDF, MS-Word and MS-Excel Formats using Aspose APIs (Aspose.PDF, Aspose.Words, Aspose.Cells)
+4.   On Add Visit Page, You can now also Feed Bill Amount in $ which will later display along with generated Barcode image on the Add Visit Page and Owners Information Page by using Aspose APIs (Aspose.Barcode)
+5.   Export to PDF, MS-Word and MS-Excel documents (On Veterinarians Page & Owners List Page) also shows the sample usages of Aspose APIs for inserting Images, Formattings and Tables to the generated documents using Aspose.Words, Aspose.PDF and Aspose.Cells
+6.   For creating / displaying Barcode Image using Aspose APIs (Aspose.Barcode) on JSP or any MVC Framework using JSP as Views, Tag Library <aspose:getBarcodeUrl> is created through which a Barcode Image can be very easily generated and embeded on the page providing CodeText / Amount and Symbology (Type of Barcode i.e Code128, QR) through tag attributes.
+7.  Source code of usage of above features of Aspose API (Aspose.PDF,Aspose.Words, Aspose.Cells, Aspose.Email, Aspose.Barcode) are included in this project repository (Integrated with ready to run PetClinic Spring Sample Web Application).
+8.  Source Codes of Tag Library for Aspose.Barcode usage for JSPs also included with the project sources code and demonstrated on Add/Edit Visit Page and Owners Information Page
+9.  This Spring PetClinic Web Application extension for Aspose API also shows the Aspose APIs integration with Maven
 
-5. Also shows Aspose API for java integration with Maven java project.
+## Comming Soon: 
 
-Comming Soon:
-
-5. Aspose.Word API for Java feature of generating/printing to Word document any Web Page.
+Export webpages of Spring PetClinic Web Application to PDF and MS-WORD documents using Aspose APIs (Aspose.PDF, Aspose.Words), that will be for showing the sample sourcecodes for the usage of HTML to PDF and MS-WORD documents export features of Aspose APIs
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>

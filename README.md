@@ -11,7 +11,13 @@ This extension helps you to explore Aspose Java components within Spring Framewo
 ## What does it look like?
 -spring-petclinic has been deployed here on cloudfoundry: http://demo-spring-petclinic.cfapps.io/
 
-## For Aspose API for Java see url : http://www.aspose.com/java/total-component.aspx
+
+## Important Links
+
+[Youtube Video Demo of the project](https://www.youtube.com/watch?v=GLujBd6gq_Y&feature=youtu.be)
+
+[Aspose Java APIs](http://www.aspose.com/java/total-component.aspx)
+    
 
 ## This Extension of Spring PetClinic Sample Application for Aspose API includes the following new features and webpages updates:
 

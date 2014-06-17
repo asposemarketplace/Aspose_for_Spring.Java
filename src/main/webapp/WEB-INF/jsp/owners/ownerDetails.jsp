@@ -5,7 +5,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %>
-<%@ taglib uri="/WEB-INF/tags/aspose/aspose.tld" prefix="aspose" %>
+<%@ taglib uri="/WEB-INF/tags/aspose/AsposeAPI.tld" prefix="aspose" %>
 <html lang="en">
 
 <jsp:include page="../fragments/headTag.jsp"/>

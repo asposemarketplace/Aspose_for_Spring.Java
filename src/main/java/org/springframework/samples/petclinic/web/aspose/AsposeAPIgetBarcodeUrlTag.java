@@ -10,7 +10,7 @@ import java.lang.reflect.Modifier;
  * Project Extension Name: Aspose for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
- * Company: Aspose Pte Ltd.
+ * Company: Aspose Pty Ltd.
  *
  * Date: 4/6/2014
  *
@@ -19,9 +19,8 @@ import java.lang.reflect.Modifier;
  * (Aspose.Word, Aspose.PDF, Aspose.Cells,Aspose.Email, Aspose Barcode)
  * for Spring, Spring MVC Java Developers.
  */
-public class getBarcodeUrlTag extends SimpleTagSupport implements AsposeAPIConstants{
+public class AsposeAPIgetBarcodeUrlTag extends SimpleTagSupport implements AsposeAPIConfiguration {
 
-    private static final String BarcodeTypeConstantClass="com.aspose.barcode.Symbology";
     private String symbology;
     private String billamount;
     private String varName;

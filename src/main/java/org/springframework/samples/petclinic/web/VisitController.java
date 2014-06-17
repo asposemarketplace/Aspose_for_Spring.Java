@@ -30,7 +30,7 @@ import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.model.Visit;
 import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.samples.petclinic.web.aspose.AsposeAPI;
-import org.springframework.samples.petclinic.web.aspose.AsposeAPIConstants;
+import org.springframework.samples.petclinic.web.aspose.AsposeAPIConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.DataBinder;
@@ -47,19 +47,14 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 @SessionAttributes("visit")
-public class VisitController implements AsposeAPIConstants{
+public class VisitController implements AsposeAPIConfiguration {
 
     private final ClinicService clinicService;
 
-    @Value("#{myProps['barCodeServiceUrl']}")
-    public static String barCodeServiceURL;
     @Autowired
     public VisitController(ClinicService clinicService) {
         this.clinicService = clinicService;
     }
-
-    @Autowired
-    private FormattingConversionService conversionService;
 
     @InitBinder
     public void setAllowedFields(WebDataBinder dataBinder) {
@@ -91,53 +86,5 @@ public class VisitController implements AsposeAPIConstants{
         ModelAndView mav = new ModelAndView("visitList");
         mav.addObject("visits", this.clinicService.findPetById(petId).getVisits());
         return mav;
-    }
-/*
- * Project Extension Name: Aspose for Spring Java (petclinic)
- *
- * @author: Adeel Ilyas
- * Company: Aspose Pte Ltd.
- *
- * Date: 4/6/2014
- *
- * Detail:
- * This Extension was written to showcase the usage of Aspose APIs for Java
- * (Aspose.Word, Aspose.PDF, Aspose.Cells,Aspose.Email, Aspose Barcode)
- * for Spring, Spring MVC Java Developers.
- */
-
-/*
-*
-* Aspose Barcode Generator Action
-*
-* @author Adeel Ilyas
-*
-*/
-    @RequestMapping(value = BarcodeSpringMVCRequestMapping,method = RequestMethod.GET)
-    public void getBarcode(@PathVariable Double billAmount,@PathVariable String symbology,HttpServletResponse response) {
-
-            try {
-                ServletOutputStream out = response.getOutputStream();
-                response.setContentType("image/png");
-              //  conversionService
-
-                DataBinder binder = new DataBinder(new CurrencyAmount(billAmount));
-                binder.setConversionService(conversionService);
-                String codeText = binder.getBindingResult().getFieldValue("billAmount").toString();
-
-                AsposeAPI.createAsposeBarCode(codeText, out,symbology);
-                out.flush();
-                out.close();
-
-
-                System.out.println("BillAmount: " + billAmount);
-                System.out.println("BillAmount (formatted): " + codeText);
-
-
-            } catch (IOException io) {
-
-            }
-
-
     }
 }

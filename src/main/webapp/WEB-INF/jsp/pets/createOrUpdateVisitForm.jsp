@@ -5,7 +5,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="joda" uri="http://www.joda.org/joda/time/tags" %>
-<%@ taglib uri="/WEB-INF/tags/aspose/aspose.tld" prefix="aspose" %>
+<%@ taglib uri="/WEB-INF/tags/aspose/AsposeAPI.tld" prefix="aspose" %>
 <html lang="en">
 
 <jsp:include page="../fragments/headTag.jsp"/>

@@ -115,7 +115,7 @@ public class OwnerController {
  * Project Extension Name: Aspose for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
- * Company: Aspose Pte Ltd.
+ * Company: Aspose Pty Ltd.
  *
  * Date: 4/6/2014
  *

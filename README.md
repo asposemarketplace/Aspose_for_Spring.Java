@@ -12,10 +12,9 @@ This extension helps you to explore Aspose Java components within Spring Framewo
 -spring-petclinic has been deployed here on cloudfoundry: http://demo-spring-petclinic.cfapps.io/
 
 
-## Important Links
+## Recommended Links
 
 [Youtube Video Demo of the project](https://www.youtube.com/watch?v=GLujBd6gq_Y&feature=youtu.be)
-
 [Aspose Java APIs](http://www.aspose.com/java/total-component.aspx)
     
 
@@ -45,6 +44,16 @@ Export webpages of Spring PetClinic Web Application to PDF and MS-WORD documents
 ```
 
 You can then access petclinic here: http://localhost:9966/petclinic/
+
+**Note**: In case of any PermGen related JVM error, adjust PermGen memory space by setting the appropriate values to MAVEN_OPTS environment variable.
+
+For Example:
+
+    export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
+
+(or on Windows:)
+
+    set MAVEN_OPTS=-Xmx512m -XX:MaxPermSize=128m
 
 
 ## Working with Petclinic in JetBrains

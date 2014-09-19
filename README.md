@@ -14,8 +14,8 @@ This extension helps you to explore Aspose Java components within Spring Framewo
 
 ## Recommended Links
 
-[Youtube Video Demo of the project](https://www.youtube.com/watch?v=GLujBd6gq_Y&feature=youtu.be)
-[Aspose Java APIs](http://www.aspose.com/java/total-component.aspx)
+1.  [Youtube Video Demo of the project](https://www.youtube.com/watch?v=GLujBd6gq_Y&feature=youtu.be)
+2.  [Aspose Java APIs](http://www.aspose.com/java/total-component.aspx)
     
 
 ## This Extension of Spring PetClinic Sample Application for Aspose API includes the following new features and webpages updates:

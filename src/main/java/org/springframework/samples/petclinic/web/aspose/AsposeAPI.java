@@ -9,18 +9,12 @@ import aspose.pdf.Table;
 import com.aspose.barcode.BarCodeBuilder;
 import com.aspose.barcode.BarCodeImageFormat;
 import com.aspose.barcode.CodeLocation;
-import com.aspose.barcode.Symbology;
 import com.aspose.cells.*;
-import com.aspose.cells.Color;
 import com.aspose.email.MailAddress;
 import com.aspose.email.MailMessage;
 import com.aspose.email.MailMessageSaveType;
-import com.aspose.pdf.TextBuilder;
-import com.aspose.pdf.TextFragment;
-import com.aspose.pdf.TextParagraph;
 import com.aspose.words.*;
 import com.aspose.words.Font;
-import com.aspose.words.HeaderFooterType;
 import com.aspose.words.LoadFormat;
 import com.aspose.words.LoadOptions;
 import com.aspose.words.Shape;
@@ -31,14 +25,13 @@ import org.springframework.samples.petclinic.model.Vets;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletOutputStream;
-import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Iterator;
 /*
- * Project Extension Name: Aspose for Spring Java (petclinic)
+ * Project Extension Name: Aspose Java for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
  * Company: Aspose Pty Ltd.
@@ -176,7 +169,7 @@ public class AsposeAPI {
         // Save the document
         img1 = new aspose.pdf.Image(sec1);
         //Set the path of image file
-        img1.getImageInfo().setFile(context.getRealPath("resources/images/aspose/asposeimage.jpg"));
+        img1.getImageInfo().setFile(context.getRealPath("resources/images/aspose/asposeimage.png"));
         sec1.getParagraphs().add(img1);
 
         pdf1.save(out);
@@ -297,7 +290,7 @@ public class AsposeAPI {
 
 
 
-            shape = builder.insertImage(context.getResourceAsStream("resources/images/aspose/asposeimage.jpg"));
+            shape = builder.insertImage(context.getResourceAsStream("resources/images/aspose/asposeimage.png"));
 
             shape.setWrapType(WrapType.TOP_BOTTOM);
 
@@ -342,7 +335,7 @@ public class AsposeAPI {
 
 
             //Adding a picture at the location of a cell whose row and column indices
-            pictureIndex = sheet.getPictures().add(22,4,context.getResourceAsStream("resources/images/aspose/asposeimage.jpg"));
+            pictureIndex = sheet.getPictures().add(22,4,context.getResourceAsStream("resources/images/aspose/asposeimage.png"));
             picture = sheet.getPictures().get(pictureIndex);
 
 //Positioning the picture proportional to row height and colum width
@@ -473,7 +466,7 @@ public class AsposeAPI {
         // Save the document
         img1 = new aspose.pdf.Image(sec1);
         //Set the path of image file
-        img1.getImageInfo().setFile(context.getRealPath("resources/images/aspose/asposeimage.jpg"));
+        img1.getImageInfo().setFile(context.getRealPath("resources/images/aspose/asposeimage.png"));
         sec1.getParagraphs().add(img1);
         // Save the document
 
@@ -598,7 +591,7 @@ public class AsposeAPI {
 
 
 
-            shape = builder.insertImage(context.getResourceAsStream("resources/images/aspose/asposeimage.jpg"));
+            shape = builder.insertImage(context.getResourceAsStream("resources/images/aspose/asposeimage.png"));
 
             shape.setWrapType(WrapType.TOP_BOTTOM);
 
@@ -642,7 +635,7 @@ public class AsposeAPI {
 
 
             //Adding a picture at the location of a cell whose row and column indices
-             pictureIndex = sheet.getPictures().add(22,4,context.getResourceAsStream("resources/images/aspose/asposeimage.jpg"));
+             pictureIndex = sheet.getPictures().add(22,4,context.getResourceAsStream("resources/images/aspose/asposeimage.png"));
              picture = sheet.getPictures().get(pictureIndex);
 
 //Positioning the picture proportional to row height and colum width

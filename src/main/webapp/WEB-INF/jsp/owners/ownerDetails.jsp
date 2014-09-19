@@ -79,9 +79,8 @@
                                 <td><joda:format value="${visit.date}" pattern="yyyy-MM-dd"/></td>
                                 <td><c:out value="${visit.description}"/></td>
                                 <td>
-                                <aspose:getBarcodeUrl symbology="QR" billAmount="${visit.billAmount}"
-                                                 var="barcodeUrl"/>
-                               <img src="${barcodeUrl}" alt="Sponsored by Aspose"/>
+                                <aspose:getBarcodeUrl symbology="QR" billAmount="${visit.billAmount}"                                                 var="barcodeUrl"/>
+                                <img src="${barcodeUrl}" alt="Sponsored by Aspose"/>
 			                    </td>
                             </tr>
                         </c:forEach>

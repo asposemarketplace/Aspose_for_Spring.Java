@@ -16,25 +16,15 @@
 package org.springframework.samples.petclinic.web.aspose;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.support.FormattingConversionService;
 import org.springframework.samples.petclinic.model.CurrencyAmount;
-import org.springframework.samples.petclinic.model.Pet;
-import org.springframework.samples.petclinic.model.Visit;
-import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.validation.DataBinder;
-import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.support.SessionStatus;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
 import java.io.IOException;
-import java.util.Map;
 
 /**
  * @author Adeel Ilyas
@@ -42,7 +32,7 @@ import java.util.Map;
 @Controller
 
 /*
- * Project Extension Name: Aspose for Spring Java (petclinic)
+ * Project Extension Name: Aspose Java for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
  * Company: Aspose Pty Ltd.

@@ -40,12 +40,11 @@
         <tr>
 
         <td align="right">
-        <img src="<spring:url value="/resources/images/aspose/asposeSmall.png" htmlEscape="true" />"alt="Sponsored by Aspose"/>
+        <img src="<spring:url value="/resources/images/aspose/asposeSmall.png" htmlEscape="true"/>"alt="Sponsored by Aspose"/>
         <b>Export To:</b>
         </td>
         </tr>
         </table>
-
         <table>
 
             <tr>
@@ -58,6 +57,7 @@
 <td><a href='<spring:url value="/owners/cells/export" htmlEscape="true"/>'>
                 <img src="<spring:url value="/resources/images/aspose/aspose_cells-for-java.jpg" htmlEscape="true" />"
                                                alt="Sponsored by Aspose"/></a></td>
+
             </tr>
         </table>
 

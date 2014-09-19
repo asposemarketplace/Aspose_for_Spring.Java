@@ -7,7 +7,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 /*
- * Project Extension Name: Aspose for Spring Java (petclinic)
+ * Project Extension Name: Aspose Java for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
  * Company: Aspose Pty Ltd.

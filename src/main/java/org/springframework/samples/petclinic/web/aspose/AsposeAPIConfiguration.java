@@ -4,7 +4,7 @@ package org.springframework.samples.petclinic.web.aspose;
  * Created by Adeel Ilyas on 6/9/2014.
  */
 /*
- * Project Extension Name: Aspose for Spring Java (petclinic)
+ * Project Extension Name: Aspose Java for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
  * Company: Aspose Pty Ltd.

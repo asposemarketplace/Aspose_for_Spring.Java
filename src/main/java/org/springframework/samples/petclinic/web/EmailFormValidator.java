@@ -29,14 +29,13 @@
 package org.springframework.samples.petclinic.web;
 
 import org.springframework.samples.petclinic.model.EmailForm;
-import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /*
- * Project Extension Name: Aspose for Spring Java (petclinic)
+ * Project Extension Name: Aspose Java for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
  * Company: Aspose Pty Ltd.

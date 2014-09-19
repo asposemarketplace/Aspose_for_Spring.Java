@@ -63,7 +63,7 @@ public class VetController {
     }
 
  /*
- * Project Extension Name: Aspose for Spring Java (petclinic)
+ * Project Extension Name: Aspose Java for Spring Java (petclinic)
  *
  * @author: Adeel Ilyas
  * Company: Aspose Pty Ltd.
@@ -147,8 +147,6 @@ public class VetController {
 
 
                 System.out.println("Message Sent: " + emailform.getMessage());
-                //status.setComplete();
-
 
             } catch (IOException io) {
 

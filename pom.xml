@@ -69,41 +69,37 @@
 	</properties>
     <repositories>
         <repository>
-            <id>aspose.com</id>
-            <name>AsposeAPI</name>
-            <url>file:${project.basedir}/asposeapis</url>
+            <id>AsposeJavaAPI</id>
+            <name>Aspose Java API</name>
+            <url>http://maven.aspose.com/artifactory/simple/ext-release-local/</url>
         </repository>
     </repositories>
     <dependencies>
         <dependency>
             <groupId>com.aspose</groupId>
-            <artifactId>aspose.pdf.kit</artifactId>
-            <version>4.7.0</version>
+            <artifactId>aspose-pdf</artifactId>
+            <version>9.3.1</version>
+            <classifier>jdk16</classifier>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
-            <artifactId>aspose.pdf.jdk</artifactId>
-            <version>14</version>
+            <artifactId>aspose-words</artifactId>
+            <version>14.5.0</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
-            <artifactId>aspose.words</artifactId>
-            <version>14.4.1</version>
+            <artifactId>aspose-cells</artifactId>
+            <version>8.2.0</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
-            <artifactId>aspose.cells</artifactId>
-            <version>8.0.2</version>
+            <artifactId>aspose-email</artifactId>
+            <version>4.4.0.0</version>
         </dependency>
         <dependency>
             <groupId>com.aspose</groupId>
-            <artifactId>aspose.email</artifactId>
-            <version>4.1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.aspose</groupId>
-            <artifactId>aspose.barcode</artifactId>
-            <version>5.8.0</version>
+            <artifactId>aspose-barcode</artifactId>
+            <version>6.0.1.0</version>
         </dependency>
         <dependency>
 			<groupId>org.jadira.usertype</groupId>

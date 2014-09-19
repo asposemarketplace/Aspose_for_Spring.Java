@@ -27,6 +27,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.samples.petclinic.web.aspose.AsposeAPI;
+import org.springframework.samples.petclinic.web.aspose.ResponseHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -44,6 +45,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Ken Krebs
  * @author Arjen Poutsma
  * @author Michael Isvy
+ * @author Adeel Ilyas (adeel.ilyas@aspose.com)
  */
 @Controller
 @SessionAttributes(types = Owner.class)
@@ -110,20 +112,8 @@ public class OwnerController {
             return "redirect:/owners/" + owner.getId();
         }
     }
+//
 
-/*
- * Project Extension Name: Aspose for Spring Java (petclinic)
- *
- * @author: Adeel Ilyas
- * Company: Aspose Pty Ltd.
- *
- * Date: 4/6/2014
- *
- * Detail:
- * This Extension was written to showcase the usage of Aspose APIs for Java
- * (Aspose.Word, Aspose.PDF, Aspose.Cells,Aspose.Email, Aspose Barcode)
- * for Spring, Spring MVC Java Developers.
- */
     @RequestMapping(value = "/owners/{typeFile}/export", method = RequestMethod.GET)
     public String processExport(@PathVariable("typeFile") String typeFile,Owner owner,HttpServletResponse response, HttpServletRequest req) {
 
@@ -168,6 +158,7 @@ public class OwnerController {
         return null;
     }
 
+
     //
     @RequestMapping(value = "/owners/{ownerId}/edit", method = RequestMethod.GET)
     public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
@@ -201,4 +192,29 @@ public class OwnerController {
        return mav;
 
     }
- }
+    @RequestMapping(value = "/html/word/export", method = RequestMethod.GET)
+    public void processExport(HttpServletResponse response) {
+
+
+
+        response.setContentType("application/msword");
+        response.setHeader("Content-Disposition","attachment;filename=Aspose-Html-To-MSWord.doc");
+
+
+        try {
+
+            ServletOutputStream out = response.getOutputStream();
+
+            byte[] bytes = ResponseHolder.getResponse();
+
+            AsposeAPI.exportHtmlToWords(out, bytes);
+
+
+        } catch (Exception io) {
+
+        }
+
+    }
+
+
+}

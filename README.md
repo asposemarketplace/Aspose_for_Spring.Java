@@ -20,19 +20,26 @@ This extension helps you to explore Aspose Java components within Spring Framewo
 
 ## This Extension of Spring PetClinic Sample Application for Aspose API includes the following new features and webpages updates:
 
-1.   On Veterinarians Page, Availability Days and Email Addresses are added, by Clicking on Email Address of any one will open Email Form where you can write email to the Veterinarian and send it through your Outlook Client by using Aspose APIs (Aspose.Email)
-2.   On Veterinarians Page, You can export Veterinarians List to PDF, MS-Word and MS-Excel Formats using Aspose APIs (Aspose.PDF, Aspose.Words, Aspose.Cells)
-3.   On Owners List Page, You can export Veterinarians List to PDF, MS-Word and MS-Excel Formats using Aspose APIs (Aspose.PDF, Aspose.Words, Aspose.Cells)
-4.   On Add Visit Page, You can now also Feed Bill Amount in $ which will later display along with generated Barcode image on the Add Visit Page and Owners Information Page by using Aspose APIs (Aspose.Barcode)
-5.   Export to PDF, MS-Word and MS-Excel documents (On Veterinarians Page & Owners List Page) also shows the sample usages of Aspose APIs for inserting Images, Formattings and Tables to the generated documents using Aspose.Words, Aspose.PDF and Aspose.Cells
-6.   For creating / displaying Barcode Image using Aspose APIs (Aspose.Barcode) on JSP or any MVC Framework using JSP as Views, Tag Library <aspose:getBarcodeUrl> is created through which a Barcode Image can be very easily generated and embeded on the page providing CodeText / Amount and Symbology (Type of Barcode i.e Code128, QR) through tag attributes.
-7.  Source code of usage of above features of Aspose API (Aspose.PDF,Aspose.Words, Aspose.Cells, Aspose.Email, Aspose.Barcode) are included in this project repository (Integrated with ready to run PetClinic Spring Sample Web Application).
-8.  Source Codes of Tag Library for Aspose.Barcode usage for JSPs also included with the project sources code and demonstrated on Add/Edit Visit Page and Owners Information Page
-9.  This Spring PetClinic Web Application extension for Aspose API also shows the Aspose APIs integration with Maven
+## Latest Release v1.1
+**What's New**
 
-## Comming Soon: 
+1.    Local Aspose Maven Dependencies have been replaced with Aspose Centralized APIs Maven Dependencies supported by Aspose Cloud Maven Repository for Aspose.Words, Aspose.Pdf, Aspose.Cells, Aspose.Email and Aspose.Barcode Java APIs. See the pom.xml file.
+2.    Size of the project has been reduced from 48 MB to 2 MB because of removal of local dependencies from project.
+3.    UI enhancements
+4.    Use case for showcasing Aspose.Words Java API feature of converting HTML to MS-WORD added by providing new option image of HTML to MS-WORD export on bottom of all webpages that converts the current web page (html) with images into MS-WORD file and save to disk.
+5.    Bug fixes and to avoid PermGen errors, allocation defined for IntelliJ IDEA in .idea/workspace.xml configuration file.
 
-Export webpages of Spring PetClinic Web Application to PDF and MS-WORD documents using Aspose APIs (Aspose.PDF, Aspose.Words), that will be for showing the sample sourcecodes for the usage of HTML to PDF and MS-WORD documents export features of Aspose APIs
+**Release - v1.0** 
+
+1.    On Veterinarians Page, Availability Days and Email Addresses are added, by Clicking on Email Address of any one will open Email Form where you can write email to the Veterinarian and send it through your Outlook Client by using Aspose APIs (Aspose.Email)
+2.    On Veterinarians Page, You can export Veterinarians List to PDF, MS-Word and MS-Excel Formats using Aspose APIs (Aspose.PDF, Aspose.Words, Aspose.Cells)
+3.    On Owners List Page, You can export Veterinarians List to PDF, MS-Word and MS-Excel Formats using Aspose APIs (Aspose.PDF, Aspose.Words, Aspose.Cells)
+4.    On Add Visit Page, You can now also Feed Bill Amount in $ which will later display along with generated Barcode image on the Add Visit Page and Owners Information Page by using Aspose APIs (Aspose.Barcode)
+5.    Export to PDF, MS-Word and MS-Excel documents (On Veterinarians Page & Owners List Page) also shows the sample usages of Aspose APIs for inserting Images, Formattings and Tables to the generated documents using Aspose.Words, Aspose.PDF and Aspose.Cells
+6.    For creating / displaying Barcode Image using Aspose APIs (Aspose.Barcode) on JSP or any MVC Framework using JSP as Views, Tag Library <aspose:getBarcodeUrl> is created through which a Barcode Image can be very easily generated and embeded on the page providing CodeText / Amount and Symbology (Type of Barcode i.e Code128, QR) through tag attributes.
+7.    Source code of usage of above features of Aspose API (Aspose.PDF,Aspose.Words, Aspose.Cells, Aspose.Email, Aspose.Barcode) are included in this project repository (Integrated with ready to run PetClinic Spring Sample Web Application).
+8.    Source Codes of Tag Library for Aspose.Barcode usage for JSPs also included with the project sources code and demonstrated on Add/Edit Visit Page and Owners Information Page
+9.    This Spring PetClinic Web Application extension for Aspose API also shows the Aspose APIs integration with Maven
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
